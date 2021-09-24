@@ -3,7 +3,7 @@ name: Retweet
 on:
   workflow_dispatch:
   schedule:
-    - cron: '*/30 * * * *' # Runs Bot every 30 minutes
+    - cron: '*/120 * * * *' # Runs Bot every 2 hours
 
 jobs:
   build:
