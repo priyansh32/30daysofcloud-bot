@@ -17,8 +17,6 @@ client.get('/search/tweets', params, (error, tweets, response) => {
             client.post(`statuses/retweet/${tweet.id_str}`, (error, response) => {
                 if (!error) {
                     console.log('Retweeted: ', tweet.id_str);
-                } else {
-                    console.log('Error: ', error);
                 }
             });
         });
