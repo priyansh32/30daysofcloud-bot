@@ -4,9 +4,9 @@ const config = require('./config.js');
 const client = new Twitter(config);
 
 let params = {
-    q: '#30daysofgooglecloud -filter:retweets',
-    count: 10,
-    result_type: 'recent',
+    q: '30daysofgooglecloud -filter:retweets',
+    count: 30,
+    result_type: 'mixed',
     lang: 'en'
 };
 
