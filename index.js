@@ -6,7 +6,7 @@ const client = new Twitter(config);
 let params = {
     q: '30daysofgooglecloud -filter:retweets',
     count: 50,
-    result_type: 'mixed',
+    result_type: 'recent',
     lang: 'en'
 };
 
