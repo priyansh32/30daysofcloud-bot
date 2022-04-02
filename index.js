@@ -4,7 +4,7 @@ const config = require('./config.js');
 const client = new Twitter(config);
 
 let params = {
-    q: '30daysofgooglecloud -filter:retweets',
+    q: 'cat (has:images) AND (-filter:retweets)',
     count: 50,
     result_type: 'recent',
     lang: 'en'
