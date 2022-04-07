@@ -4,7 +4,7 @@ const config = require('./config.js');
 const client = new Twitter(config);
 
 let params = {
-    q: '@pikaso_me has:images is:reply',
+    q: '@pikaso_me has:images',
     count: 50,
     result_type: 'recent',
     lang: 'en'
