@@ -14,9 +14,14 @@ let params = {
 client.get('/search/tweets', params, (error, tweets, response) => {
     if (!error) {
         tweets.statuses.forEach((tweet) => {
-            client.post(`statuses/retweet/${tweet.id_str}`, (error, response) => {
+            client.post('/statuses/update', {
+                status: `@pikaso_me ${tweet.text}`,
+                in_reply_to_status_id: tweet.id_str
+            }, (error, tweet, response) => {
                 if (!error) {
-                    console.log('Retweeted: ', tweet.id_str);
+                    console.log(`${tweet.user.screen_name} replied to ${tweet.in_reply_to_screen_name}`);
+                } else {
+                    console.log(error);
                 }
             });
         });
